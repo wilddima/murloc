@@ -1,5 +1,5 @@
-require "urloc/version"
+require 'urloc/version'
 
+# Urloc
 module Urloc
-  # Your code goes here...
 end
