@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - urloc.gemspec
+    - spec/dummy/**/*
 
 Metrics/LineLength:
   Max: 100
@@ -18,3 +19,6 @@ Metrics/MethodLength:
 
 Metrics/ParameterLists:
   Max: 7
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact

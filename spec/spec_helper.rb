@@ -1,4 +1,6 @@
 require 'bundler/setup'
+# require 'urloc/rails/helpers'
+# require 'urloc/rails/routes'
 require 'urloc'
 
 RSpec.configure do |config|

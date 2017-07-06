@@ -1,11 +1,17 @@
-require 'spec_helper'
+require 'rails_helper'
 
-RSpec.describe ActionView::Helpers::UrlHelper do
-  subject { Class.new.extend(described_class) }
+RSpec.describe ApplicationHelper, type: :helper do
+  describe '#link_to_change_locale' do
+    let(:link_name) { 'link' }
 
-  context '.link_to_change_locale' do
-    it '' do
-      expect(subject.link_to_change_locale).to eq('')
+    context 'root path' do
+      let(:path) { root_path }
+      let(:locale) { :en }
+      let(:link) { "<a href=\"#{locale}//\">#{link_name}</a>" }
+
+      it 'does return ' do
+        expect(helper.link_to_change_locale(link_name, path)).to eq(link)
+      end
     end
   end
 end
