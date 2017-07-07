@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    urloc (0.1.0)
+    murloc (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -112,7 +112,7 @@ PLATFORMS
 DEPENDENCIES
   rails (~> 5.1)
   sqlite3
-  urloc!
+  murloc!
 
 BUNDLED WITH
    1.14.6

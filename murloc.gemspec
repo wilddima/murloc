@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'urloc/version'
+require 'murloc/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "urloc"
-  spec.version       = Urloc::VERSION
+  spec.name          = "murloc"
+  spec.version       = Murloc::VERSION
   spec.authors       = ["Dmitrii Topornin"]
   spec.email         = ["dtopornin@gmail.com"]
 

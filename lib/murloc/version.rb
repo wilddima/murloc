@@ -1,3 +1,3 @@
-module Urloc
+module Murloc
   VERSION = '0.1.0'.freeze
 end

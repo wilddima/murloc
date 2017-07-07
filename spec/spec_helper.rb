@@ -1,7 +1,7 @@
 require 'bundler/setup'
-# require 'urloc/rails/helpers'
-# require 'urloc/rails/routes'
-require 'urloc'
+# require 'murloc/rails/helpers'
+# require 'murloc/rails/routes'
+require 'murloc'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,6 +1,6 @@
 AllCops:
   Exclude:
-    - urloc.gemspec
+    - murloc.gemspec
     - spec/dummy/**/*
 
 Metrics/LineLength:
