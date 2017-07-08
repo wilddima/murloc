@@ -110,9 +110,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  murloc!
   rails (~> 5.1)
   sqlite3
-  murloc!
 
 BUNDLED WITH
    1.14.6
