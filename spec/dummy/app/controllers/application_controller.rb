@@ -1,3 +1,3 @@
 class ApplicationController <  ActionController::Base
-  include Murloc::Helpers
+  include Murloc
 end

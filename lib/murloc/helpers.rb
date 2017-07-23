@@ -2,17 +2,24 @@ module Murloc
   # Mix it to add helpers to change locale
   module Helpers
     def self.included(base)
-      return unless respond_to?(:helper_method)
+      # return unless respond_to?(:cookies)
 
       base.class_eval do
-        helper_method :link_to_change_locale
+        before_action :set_locale
       end
     end
 
-    def link_to_change_locale(name = nil, options = nil, html_options = nil, &block)
-      options_with_locale = "#{I18n.locale}/" + options
-      context = respond_to?(:link_to) ? self : view_context
-      context.link_to(name, options_with_locale, html_options, &block)
+    def default_url_options
+      { locale: I18n.locale }
+    end
+
+    def set_locale
+      I18n.locale = locale
+    end
+
+    def locale
+      return cookies[:locale] if cookies[:locale] == params[:locale]
+      cookies[:locale] = params[:locale]
     end
   end
 end
