@@ -19,3 +19,6 @@ Metrics/MethodLength:
 
 Metrics/ParameterLists:
   Max: 7
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
