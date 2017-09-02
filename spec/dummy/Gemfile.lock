@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    murloc (0.1.0)
+    murloc (0.0.1)
 
 GEM
   remote: https://rubygems.org/

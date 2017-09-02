@@ -3,7 +3,6 @@ module Murloc
   module Helpers
     def self.included(base)
       # return unless respond_to?(:cookies)
-
       base.class_eval do
         before_action :set_locale
       end
