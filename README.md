@@ -1,5 +1,8 @@
 # Murloc
 
+{<img src="https://travis-ci.org/WildDima/murloc.svg?branch=master"
+alt="Build Status" />}[https://travis-ci.org/WildDima/murloc]
+
 ## Installation
 
 Add this line to your application's Gemfile:
