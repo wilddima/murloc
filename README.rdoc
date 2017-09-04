@@ -20,7 +20,36 @@ Or install it yourself as:
 
 == Usage
 
-TODO
+Add this to yours `config/routes.rb` file:
+  in_locales([:en, :ru]) do
+    # ...
+  end
+The argument is an array of locales.
+
+Also you need to include `Murloc` to yours `ApplicationController`:
+  class ApplicationController <  ActionController::Base
+    include Murloc
+    # ...
+  end
+
+That's all!
+
+Local of user will be set in cookies, so user always will have the same locale, which he chosen.
+
+To change locale you can use helper, which also included by Murloc:
+
+  link_to_change_locale 'English', :en
+
+Or you can use it like this, to have list of all locales:
+
+  <%I18n.locales.each do |locale|%>
+    <%= link_to_change_locale locale, locale %>
+  <%end%>
+
+It's just wrapper around `link_to` helper, so you can do anything like with `link_to`:
+  <%= link_to_change_licale(:en) do %>
+    <span>Eng</span>
+  <%end%>
 
 == Development
 
