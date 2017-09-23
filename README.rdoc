@@ -20,42 +20,40 @@ Or install it yourself as:
 
 == Usage
 
-Add this to yours `config/routes.rb` file:
+Add this to yours +config/routes.rb+ file:
   in_locales([:en, :ru]) do
     # ...
   end
 The argument is an array of locales.
 
-Also you need to include `Murloc` to yours `ApplicationController`:
+Also you need to include +Murloc+ to yours +ApplicationController+:
   class ApplicationController <  ActionController::Base
     include Murloc
     # ...
   end
 
-That's all!
+Locale of user will be set in cookies, so user always will have the same locale, which he chosen.
 
-Local of user will be set in cookies, so user always will have the same locale, which he chosen.
+To change locale you can use +link_to+ helper:
 
-To change locale you can use helper, which also included by Murloc:
+  link_to 'English', locale: :en
 
-  link_to_change_locale 'English', :en
-
-Or you can use it like this, to have list of all locales:
+You can use it like this, to have list of all locales:
 
   <%I18n.locales.each do |locale|%>
-    <%= link_to_change_locale locale, locale %>
+    <%= link_to locale, locale: locale %>
   <%end%>
 
-It's just wrapper around `link_to` helper, so you can do anything like with `link_to`:
-  <%= link_to_change_licale(:en) do %>
+And it's just common +link_to+ helper, so you can do anything like this:
+  <%= link_to_change_locale(:en) do %>
     <span>Eng</span>
   <%end%>
 
 == Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run +bin/setup+ to install dependencies. Then, run +rake spec+ to run the tests. You can also run +bin/console+ for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run +bundle exec rake install+. To release a new version, update the version number in +version.rb+, and then run +bundle exec rake release+, which will create a git tag for the version, push git commits and tags, and push the +.gem+ file to [rubygems.org](https://rubygems.org).
 
 == Contributing
 
