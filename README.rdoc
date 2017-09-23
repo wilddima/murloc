@@ -20,6 +20,8 @@ Or install it yourself as:
 
 == Usage
 
+Tested only on rails 5. For any other rails version working capacity wasn't tested.
+
 Add this to yours +config/routes.rb+ file:
   in_locales([:en, :ru]) do
     # ...
