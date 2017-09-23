@@ -3,6 +3,8 @@
 {<img src="https://travis-ci.org/WildDima/murloc.svg?branch=master"
 alt="Build Status" />}[https://travis-ci.org/WildDima/murloc]
 
+This gem allows using localization through routing like this: +localhost:3000/en+, where +en+ is the current locale.
+
 == Installation
 
 Add this line to your application's Gemfile:
